@@ -1,4 +1,4 @@
 sps-stats
 =========
 
-POC Angularjs + Dandle + ElasticSearch + MongoDB
+POC Angularjs + Bootstrap + Dandle + ElasticSearch + MongoDB
