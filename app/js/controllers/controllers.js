@@ -1,11 +1,17 @@
 'use strict';
 
 /* Controllers */
+var statsControllerModule = angular.module('myApp.controllers', []);
 
-angular.module('myApp.controllers', []).
-  controller('MyCtrl1', [function() {
+statsControllerModule.controller('MyCtrl1', [function() {
+}]);
 
-  }])
-  .controller('MyCtrl2', [function() {
 
-  }]);
+statsControllerModule.controller('MyCtrl2', [function() {
+}]);
+
+statsControllerModule.controller('StatsCtrl', ['$scope', 'lesdomainesexistants', 'author', function($scope, lesdomainesexistants, author) {
+		$scope.domaines = lesdomainesexistants;
+        $scope.artist = author;
+	}
+ ]);

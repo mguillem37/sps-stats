@@ -16,4 +16,17 @@ describe('filter', function() {
       expect(interpolateFilter('before %VERSION% after')).toEqual('before TEST_VER after');
     }));
   });
+
+    describe('copyright', function() {
+        beforeEach(module(function($provide) {
+            $provide.value('author', 'MG');
+        }));
+
+        it('should replace AUTHOR', inject(function(copyrightFilter) {
+            expect(copyrightFilter('MG')).toEqual('@MG');
+        }));
+    });
+
 });
+
+

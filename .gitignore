@@ -1,6 +1,9 @@
+# Project Directories #
+#######################
 logs/*
 app/node_modules/*
-Thumbs.db
+.idea/*
+
 # Compiled source #
 ###################
 *.com

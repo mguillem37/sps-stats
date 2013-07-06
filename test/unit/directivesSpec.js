@@ -16,4 +16,17 @@ describe('directives', function() {
       });
     });
   });
+
+    describe('app-author', function() {
+        it('should print author', function() {
+            module(function($provide) {
+                $provide.value('author', 'MG');
+            });
+            inject(function($compile, $rootScope) {
+                var element = $compile('<span app-author></span>')($rootScope);
+                expect(element.text()).toEqual('@MG');
+            });
+        });
+    });
+
 });

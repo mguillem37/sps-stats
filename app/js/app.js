@@ -1,14 +1,29 @@
 'use strict';
 
+var domainesCache = null;
+
 //Declare app level module which depends on filters, and services
-angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 'myApp.controllers']).
-  config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
-    $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
-    $routeProvider.otherwise({redirectTo: '/view1'});
-  }]);
+var statsModule = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 'myApp.controllers']);
+
+function routeConfigurator($routeProvider) {
+    $routeProvider.
+		when('/view1', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'}).
+		when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'}).
+		when('/view3', {templateUrl: 'partials/partial3.html', controller: 'StatsCtrl',
+            //Chargement des donnÃ©es avant l'affichage de la vue
+            resolve: {
+                lesdomainesexistants: function(Stats) {
+                    if (domainesCache == null) {
+                        console.log("chargement des domaines");
+                        domainesCache = Stats.queryDomaines();
+                    } else {
+                        console.log("utilisation du cache");
+                    }
+                    return domainesCache;
+                }
+            }}).
+		otherwise({redirectTo: '/view1'});
+};
+
+statsModule.config(routeConfigurator);
   
- // define(['angular', 'angularResource', 'controllers/controllers', 'services/services', 'filters/filters', 'directives/directives'], function (angular) {
-	//définition du module principal Angular at de ses dépendances
-	// return angular.module(‘myApp’, ['ngResource', 'controllers', 'services', 'filters', 'directives']);
-// });
