@@ -16,17 +16,17 @@ statsDirectiveModule.directive('appAuthor', ['author', function(author) {
     };
 }]);
 
-statsDirectiveModule.directive('butterbar', ['$rootScope',
-    function($rootScope) {
+statsDirectiveModule.directive('butterbar', ['$rootScope', '$log',
+    function($rootScope, $log) {
         return {
             link: function(scope, element, attrs) {
                 element.addClass('hide');
                 $rootScope.$on('$routeChangeStart', function() {
-                    console.log("routeChangeStart");
+                    $log.info("routeChangeStart");
                     element.removeClass('hide');
                 });
                 $rootScope.$on('$routeChangeSuccess', function() {
-                    console.log("routeChangeSuccess");
+                    $log.info("routeChangeSuccess");
                     element.addClass('hide');
                 });
             }

@@ -5,7 +5,7 @@
 describe('my app', function() {
 
   beforeEach(function() {
-    browser().navigateTo('../../app/index.html');
+      browser().navigateTo('../../app/index.html');
   });
 
 
@@ -42,4 +42,18 @@ describe('my app', function() {
     });
 
   });
+
+  describe('view3', function() {
+
+        beforeEach(function() {
+            browser().navigateTo('#/view3');
+        });
+
+
+        it('should render 5 span', function() {
+            expect(repeater('span').count()).toEqual(5);
+        });
+
+  });
+
 });

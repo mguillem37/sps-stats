@@ -1,0 +1,11 @@
+CACHE MANIFEST
+img/logo_caisse_depot_medium.png
+
+FALLBACK:
+
+CACHE:
+img/logo_caisse_depot_medium.png
+
+NETWORK:
+http://*
+https://*
