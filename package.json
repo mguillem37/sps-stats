@@ -1,0 +1,21 @@
+﻿{
+    "name": "sps-stats",
+    "description": "Application visualisation stats issues des SPS",
+    "version": "0.0.1-snapshot",
+    "homepage": "todo",
+    "keywords": ["angularjs", "dangle", "elasticsearch"],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mguillem37/sps-stats.git"
+    },
+    "bugs": {
+        "url": "https://github.com/mguillem37/sps-stats/issues"
+    },
+    "devDependencies": {
+		"grunt": "~0.4.1",
+		"grunt-contrib-jshint": "~0.6.0",
+		"grunt-contrib-nodeunit": "~0.2.0",
+		"grunt-contrib-uglify": "~0.2.2",
+		"bower": "0.9.2"
+    }
+}
