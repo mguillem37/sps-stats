@@ -11,6 +11,10 @@
     "bugs": {
         "url": "https://github.com/mguillem37/sps-stats/issues"
     },
+	"author": {
+        "name": "Matthieu",
+        "url": "https://github.com/mguillem37/sps-stats/blob/master/AUTHORS.txt"
+    },
     "devDependencies": {
 		"grunt": "~0.4.1",
 		"grunt-contrib-jshint": "~0.6.0",
