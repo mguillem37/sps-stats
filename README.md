@@ -6,25 +6,20 @@ POC Angularjs + Bootstrap + Dangle + ElasticSearch + MongoDB
 Packages requis
 ---------
 
-# npm install -g grunt-cli
-# npm install -g bower
-# npm install
+* npm install -g grunt-cli
+* npm install -g bower
+* npm install
 
 
 Initialisation environnement
 ---------
 
-    création des instances mongoDB (3 instances en //)
-
-    import des données (depuis un backup de base)
-
-	installation elasticSearch
-	
-	configuration plugin MongoDB
-	
-    lancement elactiSearch + elactiscHead
-
-    création de la rivière
+* création des instances mongoDB (3 instances en //)
+* import des données (depuis un backup de base)
+   - installation elasticSearch
+   - configuration plugin MongoDB
+* lancement elactiSearch + elactiscHead
+* création de la rivière
 
 TODO
 ---------
